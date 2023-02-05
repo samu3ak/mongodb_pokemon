@@ -1,5 +1,6 @@
 const express = require('express')
 const bodyParser = require("body-parser");
+const path = require("path");
 const app = express()
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -25,7 +26,7 @@ app.set("views", __dirname + "/views") // Añadir la constante __dirname es una 
 app.set("view engine", "ejs")
 
 // Middleware
-app.use(express.static(__dirname + "/public")) // Importante
+app.use(express.static(path.join(__dirname, "public"))) // Importante
 
 // Llamadas a las rutas
 app.use("/", require("./router/rutas"));
