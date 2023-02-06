@@ -4,7 +4,7 @@ En esta aplicación realizada mediante el uso de NodeJS, Express, EJS y MongoDB 
 
 MEJORAS REALIZADAS:
 
-- Añadí el CRUD de Entrenadores, con sus vistas, archivo js de rutas, modelo js.
+- Añadí el CRUD del nuevo modelo de datos (colección) llamada Entrenadores, con sus vistas, archivo js de rutas y modelo js.
 
 - Mejoré el código añadiendo el módulo path en NodeJS para unir de forma correcta las rutas a la hora de declarar el middleware express.static.
 
