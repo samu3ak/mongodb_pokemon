@@ -56,18 +56,22 @@
                 const tipo = formEditar.elements['tipo'].value
                 const descripcion = formEditar.elements['descripcion'].value
                 const id = formEditar.dataset.id
-                const data = await fetch(`/pokemon/${id}`, {
-                    method: 'PUT',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ nombre, tipo, descripcion })
-                })
-                const res = await data.json()
-                if (res.estado) {
-                    window.location.href = '/pokemon'
-                } else {
-                    console.log(res)
+                try {
+                    const data = await fetch(`/pokemon/${id}`, {
+                        method: 'PUT',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ nombre, tipo, descripcion })
+                    })
+                    const res = await data.json()
+                    if (res.estado) {
+                        window.location.href = '/pokemon'
+                    } else {
+                        console.log(res)
+                    }
+                } catch (error) {
+                    console.log(error);
                 }
             })
         </script>
