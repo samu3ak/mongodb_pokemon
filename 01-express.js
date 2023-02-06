@@ -26,7 +26,7 @@ app.set("views", __dirname + "/views") // Añadir la constante __dirname es una 
 app.set("view engine", "ejs")
 
 // Middleware
-app.use(express.static(path.join(__dirname, "public"))) // Importante
+app.use(express.static(path.join(__dirname, "public"))) // Importante, lo uno con path.join
 
 // Llamadas a las rutas
 app.use("/", require("./router/rutas"));
