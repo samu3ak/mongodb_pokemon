@@ -11,6 +11,7 @@ const port = process.env.PORT || 3005; // Hacemos uso de las variables de entorn
 
 //Conexión a base de datos
 const mongoose = require('mongoose');
+mongoose.set("strictQuery", false);
 //Variables que tendremos siempre:
 //Lo correcto será declararlas EN VARIABLES DE ENTORNO (YA ESTÁN)
 //para que nadie vea directamente nuestras credenciales
